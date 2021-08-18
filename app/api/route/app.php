@@ -10,12 +10,18 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
 
-Route::group('admin',function(){
-    Route::get('test', 'index/index');
-    Route::get('demo', 'Land/getList');
+Route::group('api',function(){
+
+    Route::get('getLandList', 'Land/getList');    /*土地列表*/
+    Route::get('LandType', 'Land/getPageList');    /*土地类型*/
+    Route::get('LatinType', 'Land/LatinList');     /*土地流转类型*/
+
+    Route::get('getFarmerList', 'Farmer/getList');    /*农机列表*/
+    Route::get('FarmerType', 'Farmer/getPageList');    /*农机类型*/
+    Route::get('ServiceType', 'Farmer/LatinList');     /*农机服务类型*/
+
+
+
 });
 
