@@ -21,7 +21,7 @@ Route::group('api',function(){
     Route::get('FarmerType', 'Farmer/getPageList');    /*农机类型*/
     Route::get('ServiceType', 'Farmer/LatinList');     /*农机服务类型*/
 
-
+    Route::get('test', 'Farmer/LatinList');     /*农机服务类型*/
 
 });
 
